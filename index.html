@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by YancyQi2002</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav id="navbar">
+  <header>JS 文档</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">概述</a></li>
+    <li>
+      <a class="nav-link" href="#What_you_should_already_know"
+        >储备内容</a
+      >
+    </li>
+    <li>
+      <a class="nav-link" href="#JavaScript_and_Java">JavaScript 与 Java</a>
+    </li>
+    <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+    <li><a class="nav-link" href="#Variables">变量</a></li>
+    <li>
+      <a class="nav-link" href="#Declaring_variables">声明变量</a>
+    </li>
+    <li><a class="nav-link" href="#Variable_scope">变量作用域</a></li>
+    <li><a class="nav-link" href="#Global_variables">全局变量</a></li>
+    <li><a class="nav-link" href="#Constants">常数</a></li>
+    <li><a class="nav-link" href="#Data_types">数据类型</a></li>
+    <li>
+      <a class="nav-link" href="#if...else_statement">if...else 语句</a>
+    </li>
+    <li><a class="nav-link" href="#while_statement">while 语句</a></li>
+    <li>
+      <a class="nav-link" href="#Function_declarations"
+        >函数声明</a
+      >
+    </li>
+    <li><a class="nav-link" href="#Reference">参考</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>概述</header>
+    <article>
+      <p>
+        JavaScript是一种跨平台、面向对象的脚本语言。这是一种小巧轻便的语言。在宿主环境(例如，网络浏览器)中，JavaScript可以连接到其环境的对象，以提供对它们的编程控制。
+      </p>
+
+      <p>
+        JavaScript包含一个标准的对象库，如数组、日期和数学，以及一组核心语言元素，如运算符、控制结构和语句。核心JavaScript可以通过添加额外的对象来扩展，以达到多种目的；例如:
+      </p>
+      <ul>
+        <li>
+          客户端JavaScript通过提供对象来控制浏览器及其文档对象模型，扩展了核心语言。例如，客户端扩展允许应用程序将元素放在一个超文本标记语言表单上，并响应用户事件，如鼠标点击、表单输入和页面导航。
+        </li>
+        <li>
+          服务器端JavaScript通过提供与服务器上运行的JavaScript相关的对象来扩展核心语言。例如，服务器端扩展允许应用程序与数据库通信，提供信息从一个应用程序调用到另一个应用程序调用的连续性，或者在服务器上执行文件操作。
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="What_you_should_already_know">
+    <header>储备内容</header>
+    <article>
+      <p>本文档假设您已经具备以下知识:</p>
+
+      <ul>
+        <li>
+          对互联网和万维网的一般理解。
+        </li>
+        <li>良好的超文本标记语言(HTML)工作知识。</li>
+        <li>
+          一些编程经验。
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="JavaScript_and_Java">
+    <header>JavaScript 与 Java</header>
+    <article>
+      <p>
+        Javascript是运行在浏览器中的一种脚本语言，在web页面中，Javascript可谓是无所不能：
+        <ol>
+          <li>可以操作HTML，提供了一种运行时改变HTML的工具</li>
+          <li>可以附加并执行事件，符合面向事件编程的思想</li>
+          <li>数据验证功能，在提交表单时对表单数据进行合法性验证</li>
+          <li>对客户浏览器的操作，前进、后退、刷新、跳转、打开新窗口、打印等</li>
+          <li>可以创建并使用Cookies</li>
+      </ol>
+      </p>
+
+      <p>
+        Java是Sun公司推出的一种编程语言。它是一种通过解释方式来执行的语言，语法规则和C++类似。同时，Java也是一种跨平台的程序设计语言。用Java语言编写的程序叫做“Applet”(小应用程序)，用编译器将它编译成类文件后，将它存在WWW页面中，并在HTML档上作好相应标记，用户端只要装上Java的客户软件就可以在网上直接运行“Applet”。Java非常适合于企业网络和Internet环境，现在已成为Internet中最受欢迎、最有影响的编程语言之一。 Java有许多值得称道的优点，如简单、面向对象、分布式、解释性、可靠、安全、结构中立性、可移植性、高性能、多线程、动态性等。Java摈弃了C++中各种弊大于利的功能和许多很少用到的功能。 Jave可以运行与任何微处理器，用Java开发的程序可以在网络上传输，并运行于任何客户机上。
+      </p>
+      <p>
+        在HTML文档中，两种编程语言的标识不同，javascript使用script来标识，而Java使用Applet来标识。javascript的代码是一种谋咀址格式，可以直接嵌入HTML文档中，并且可动态装载，编写HTML文档就像编辑文本文件一样方便，其独立文件的格式为*.js。Java是一种与HTML无关的格式，必须通过像HTML中引用外媒体那么进行装载，其代码以字节代码的形式保存在独立的文档中，其独立文件的格式为*.class。javascript中的变量声明采用弱类型，即变量在使用前不需作声明，而是解释器在运行时检查其数据类型。Java采用强类型变量检查，即所有变量在编译之前必须作声明。javascript采用动态联编，即javascript的对象引用在运行时进行检查。Java采用静态联编，即Java的对象引用必须在编译时的进行，以使编译器能够实现强类型检查。javascript不直接对文本和图形进行操作，它在Web页面中与HTML元素组合一起发挥作用，但它可以控制浏览器，让浏览器直接对文本和图形进行处理。而Java则可以直接对文本和图形进行操作。
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Hello_world">
+    <header>Hello world</header>
+    <article>
+      现在开始写JavaScript，打开Scratchpad，写下第一个 "Hello world" JavaScript代码:
+      <code
+        >function greetMe(yourName) { alert("Hello " + yourName); }
+        greetMe("World");
+      </code>
+
+      选择代码，按 Ctrl+R 在浏览器中查看!
+    </article>
+  </section>
+  <section class="main-section" id="Variables">
+    <header>变量</header>
+    <p>
+      您可以在应用程序中将变量用作值的符号名称。变量名称为标识符，符合一定的规则。
+    </p>
+    <p>
+      JavaScript标识符必须以字母、下划线(_)或美元符号($)开头；后续字符也可以是数字(0-9)。因为JavaScript区分大小写，所以字母包括字符“A”到“Z”(大写)和字符“A”到“Z”(小写)。
+    </p>
+    <p>
+      您可以在标识符中使用国际标准化组织8859-1或Unicode字母。您也可以使用Unicode转义序列作为标识符中的字符。合法名称的一些例子： Number_hits, temp99, and
+      _name。
+    </p>
+  </section>
+  <section class="main-section" id="Declaring_variables">
+    <header>声明变量</header>
+    <article>
+      可以用三种方式声明变量，推荐以下两种:
+      <p>
+        使用var 关键字。 例如, <code>var x = 42.</code> 该语法可用于声明局部和全局变量。
+      </p>
+      <p>
+        使用let关键字。例如,<code> let y = 13.</code> 该语法可用于声明块范围局部变量。
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Variable_scope">
+    <header>变量作用域</header>
+    <article>
+      <p>
+        当您在任何函数之外声明一个变量时，它被称为全局变量，因为它可用于当前文档中的任何其他代码。当您在函数中声明一个变量时，它被称为局部变量，因为它只在该函数中可用。
+      </p>
+
+      <p>
+        ECMAScript 2015之前的JavaScript没有块语句范围；相反，块中声明的变量是块所在函数(或全局范围)的局部变量。例如，下面的代码将记录5，因为x的范围是在其中声明x的函数(或全局上下文)，而不是块，在这种情况下是if语句。
+      </p>
+      <code>if (true) { var x = 5; } console.log(x); // 5</code>
+      <p>
+        当使用ECMAScript 2015中引入的let声明时，这种行为会发生变化。
+      </p>
+
+      <code
+        >if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
+        defined</code
+      >
+    </article>
+  </section>
+  <section class="main-section" id="Global_variables">
+    <header>全局变量</header>
+    <article>
+      <p>
+        全局变量实际上是全局对象的属性。在网页中，全局对象是窗口，因此您可以使用window.variable语法设置和访问全局变量。
+      </p>
+
+      <p>
+        因此，您可以通过指定窗口或框架名称，从另一个窗口或框架访问在一个窗口或框架中声明的全局变量。例如，如果在文档中声明了一个名为phoneNumber的变量，您可以从iframe中引用该变量作为parent.phoneNumber。
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Constants">
+    <header>常数</header>
+    <article>
+      <p>
+        您可以使用const关键字创建一个只读的命名常量。常量标识符的语法与变量标识符相同:它必须以字母、下划线或美元符号开头，并且可以包含字母、数字或下划线字符。
+      </p>
+
+      <code>const PI = 3.14;</code>
+      <p>
+        当脚本运行时，常量不能通过赋值来改变值或被重新声明。它必须被初始化为一个值。
+      </p>
+
+      <p>
+        常量的作用域规则与让块作用域变量的作用域规则相同。如果省略了const关键字，则认为标识符代表一个变量。
+      </p>
+
+      <p>
+        不能在同一范围内声明与函数或变量同名的常数。例如:
+      </p>
+
+      <code
+        >// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL
+        CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements
+        }</code
+      >
+      但是，对象属性不受保护，因此执行下面的语句没有问题。
+      <code
+        >const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code
+      >
+    </article>
+  </section>
+  <section class="main-section" id="Data_types">
+    <header>数据类型</header>
+    <article>
+      <ul>
+        <li>
+          <p>六种基本数据类型:</p>
+          <ul>
+            <li>布尔型 true and false.</li>
+            <li>
+              null. 表示空值的特殊关键字。因为JavaScript区分大小写，所以 null 不同于 Null, NULL或任何其他变体.
+            </li>
+            <li>undefined. 其值未定义的顶级属性.</li>
+            <li>Number. 42 or 3.14159.</li>
+            <li>字符串 "Howdy"</li>
+            <li>
+              符号(ECMAScript 2015中新增) 是唯一且不可变的数据类型
+            </li>
+          </ul>
+        </li>
+
+        <li>对象</li>
+      </ul>
+      尽管这些数据类型相对较少，但它们使您能够在应用程序中执行有用的功能。对象和函数是语言的其他基本元素。您可以将对象视为值的命名容器，将函数视为应用程序可以执行的过程。
+    </article>
+  </section>
+  <section class="main-section" id="if...else_statement">
+    <header>if...else 语句</header>
+    <article>
+      如果逻辑条件为真，则使用if语句执行语句。如果条件为假，则使用可选的else子句执行语句。
+
+      <code>if (condition) { statement_1; } else { statement_2; }</code>
+      条件可以是任何计算结果为真或假的表达式。请参见布尔运算，了解什么是真和假。如果条件评估为真，则执行语句_ 1；否则，执行语句2。语句1和语句2可以是任何语句，包括进一步嵌套的if语句。
+      <p>
+        如果要按顺序测试多个条件，也可以使用else复合语句，如下所示:
+      </p>
+      <code
+        >if (condition_1) { statement_1; } else if (condition_2) { statement_2;
+        } else if (condition_n) { statement_n; } else { statement_last; }
+      </code>
+      在多个条件的情况下，将只执行评估为真的第一个逻辑条件。要执行多个语句，需要将它们分组到一个block语句中({...})。一般来说，最好总是使用块语句，尤其是嵌套if语句时:
+
+      <code
+        >if (condition) { statement_1_runs_if_condition_is_true;
+        statement_2_runs_if_condition_is_true; } else {
+        statement_3_runs_if_condition_is_false;
+        statement_4_runs_if_condition_is_false; }</code
+      >
+      建议不要在条件表达式中使用简单赋值，因为当浏览代码时，赋值可能会与相等混淆。例如，不要使用以下代码:
+      <code>if (x = y) { /* statements here */ }</code> 如果您需要在条件表达式中使用赋值，通常的做法是在赋值的周围加上括号。 例如:
+
+      <code>if ((x = y)) { /* statements here */ }</code>
+    </article>
+  </section>
+  <section class="main-section" id="while_statement">
+    <header>while 语句</header>
+    <article>
+      while 语句只要指定条件为 true，就会执行循环。
+只要指定条件为 true，循环就可以一直执行代码。
+JavaScript 支持不同类型的循环：
+      <p>
+        for - 循环代码块一定的次数
+      </p>
+      <p>
+        for/in - 循环遍历对象的属性
+      </p>
+      <p>
+        while - 当指定的条件为 true 时循环指定的代码块
+      </p>
+      <p>
+        do/while - 同样当指定的条件为 true 时循环指定的代码块，但该语句会在条件判断前先执行一次
+      </p>
+      <p>
+       while 循环会一直循环代码块，只要指定的条件为 true。
+        <code>while (条件) {
+    要执行的代码块
+}</code>
+        在下面的例子中，循环中的代码将运行，一遍又一遍，只要变量（i）小于 10
+        <code>while (i < 10) {
+    text += "数字是 " + i;
+    i++;
+}</code>
+          do/while 循环是 while 循环的变体。在检查条件是否为真之前，这种循环会执行一次代码块，然后只要条件为真就会重复循环。
+          <code>do {
+    要执行的代码块
+}
+
+while (条件);</code>
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Function_declarations">
+    <header>函数声明</header>
+    <article>
+      函数声明（Function Declaration）：是一种独立的结构，它会声明一个具名函数，并必须以function开头。且函数声明会进行函数提升，使它能在其所在作用域的任意位置被调用，即后面的代码可以将此函数通过函数名赋值给变量或者对象属性。
+      <p>
+      函数声明后不会立即执行，只是在初始化的时候会将函数声明提升，会在我们需要的时候调用到。
+      </p>
+      <p>
+        语法:
+      </p>
+
+      <code>function functionName(parameters) {
+  执行的代码
+}</code>
+      <p>
+        如何区分函数声明和函数表达式：
+      </p>
+      <p>
+        表面上，以function开头进行声明，并且含有函数名，一定是函数声明。
+      </p>
+      <p>
+        内在的，
+      <ol>
+        <li>函数提升:就是指允许先调用函数，再进行声明，因为声明会自动提升至调用前面执行。函数声明,会将整个函数进行提升.而函数表达式则不会提升,它是在引擎运行时进行赋值，且要等到表达式赋值完成后才能调用。</li>
+        <li>函数表达式是可以没有函数名的,如果有,它的函数名也只存在于自身的作用域,var f = function fun(){console.log(fun)}其他地方是没有的.这也避免了全局污染,也方便递归。</li>
+      </ol>
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Reference">
+    <header>参考</header>
+    <article>
+      <ul>
+        <li>
+          本页中的部分文档摘自
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+            target="_blank"
+            >MDN</a
+          >
+          <a
+            href="https://www.runoob.com/jsref/jsref-tutorial.html"
+            target="_blank"
+            > runoob.com</a
+          >
+        </li>
+      </ul>
+    </article>
+  </section>
+</main>
+<!-- partial -->
+  
+</body>
+</html>
